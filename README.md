@@ -9,7 +9,7 @@
 ### 3º Passo: Criar uma pasta cmd e dentro dela cdm/nomeDaPasta
 
 ### 4º Passo: Criar um arquivo main.go e colocar o seguinte código dentro dele:
-
+``
 package main
 
 import (
@@ -24,9 +24,9 @@ func main() {
 	cfg := config.New(devMode)
 	fmt.Println(cfg)
 }
-
+``
 ### 5º Passo: Criar uma pasta config e dentro dela um arquivo config.go, com o seguinte código:
-
+``
 package config
 
 import (
@@ -56,7 +56,7 @@ func New(devModeGoBuild string) *Config {
 		DevMode: devMode,
 	}
 }
-
+``
 ### 6º Passo: Configurar o cmd do seu arquivo .air.toml da seguinte maneira:
 
-cmd = "go build -o ./tmp/main -ldflags=\"-X 'main.devMode=true'\" ./cmd/devmode"
+`cmd = "go build -o ./tmp/main -ldflags=\"-X 'main.devMode=true'\" ./cmd/devmode"`
